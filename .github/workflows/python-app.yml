@@ -29,6 +29,7 @@ jobs:
             message: "Format code with black"
             add: "src"
             branch: ${{ github.ref }}
+            push: master master --set-upstream --force 
   build:
     runs-on: ubuntu-latest
 
