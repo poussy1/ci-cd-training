@@ -22,15 +22,15 @@ jobs:
             pip install black
             black .
         - name: Commit changes
-          uses: EndBug/add-and-commit@v4
+          uses: EndBug/add-and-commit@v9
           with:
             author_name: ${{ github.actor }}
             author_email: ${{ github.actor }}@users.noreply.github.com
             message: "Format code with black"
             add: "src"
-            branch: ${{ github.ref }}
-            push: master master --set-upstream --force 
-            github_token: ${{ secrets.DEPENDABOT_TOKEN }}
+            # branch: ${{ github.ref }}
+            # push: master master --set-upstream --force 
+            # github_token: ${{ secrets.DEPENDABOT_TOKEN }}
   build:
     runs-on: ubuntu-latest
 
