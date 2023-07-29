@@ -30,6 +30,7 @@ jobs:
             add: "src"
             branch: ${{ github.ref }}
             push: master master --set-upstream --force 
+            github_token: ${{ secrets.DEPENDABOT_TOKEN }}
   build:
     runs-on: ubuntu-latest
 
